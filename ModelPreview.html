@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exploding Nuts 3D Model Preview</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      overflow: hidden;
+      background: radial-gradient(circle at 50% 35%, #26354a 0%, #121722 45%, #07090e 100%);
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+    #ui {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 10;
+      background: rgba(10, 14, 22, 0.78);
+      border: 1px solid rgba(255,255,255,0.16);
+      border-radius: 16px;
+      padding: 16px 18px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 12px 40px rgba(0,0,0,.35);
+    }
+    h1 { margin: 0 0 8px; font-size: 22px; color: #ffb21c; }
+    p { margin: 4px 0; color: #c9d2df; font-size: 14px; }
+    #status { margin-top: 10px; color: #7dff91; font-weight: bold; }
+    .controls {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 10;
+      display: flex;
+      gap: 8px;
+    }
+    button {
+      border: 1px solid rgba(255,255,255,.18);
+      background: rgba(20,28,40,.85);
+      color: white;
+      padding: 11px 14px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    button:hover { background: #ff9d00; color: #111; }
+    #dropZone {
+      position: fixed;
+      inset: 0;
+      display: none;
+      place-items: center;
+      z-index: 20;
+      background: rgba(0,0,0,.75);
+      font-size: 28px;
+      font-weight: bold;
+      color: #ffb21c;
+    }
+  </style>
+</head>
+<body>
+  <div id="ui">
+    <h1>EXPLODING NUTS — 3D PREVIEW</h1>
+    <p>Drag to rotate • Scroll to zoom • Right-drag to pan</p>
+    <p id="status">Loading model...</p>
+  </div>
+
+  <div id="dropZone">Drop a .glb or .gltf model here</div>
+
+  <div class="controls">
+    <button id="resetBtn">Reset Camera</button>
+    <button id="rotateBtn">Auto Rotate: ON</button>
+  </div>
+
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+    }
+  }
+  </script>
+
+  <script type="module">
+    import * as THREE from 'three';
+    import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+    import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+
+    const status = document.getElementById('status');
+    const scene = new THREE.Scene();
+    scene.fog = new THREE.Fog(0x101722, 8, 40);
+
+    const camera = new THREE.PerspectiveCamera(45, innerWidth / innerHeight, 0.1, 100);
+    camera.position.set(3.5, 2.4, 6.5);
+
+    const renderer = new THREE.WebGLRenderer({ antialias: true });
+    renderer.setSize(innerWidth, innerHeight);
+    renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+    renderer.shadowMap.enabled = true;
+    renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+    renderer.outputColorSpace = THREE.SRGBColorSpace;
+    document.body.appendChild(renderer.domElement);
+
+    const controls = new OrbitControls(camera, renderer.domElement);
+    controls.enableDamping = true;
+    controls.dampingFactor = 0.06;
+    controls.autoRotate = true;
+    controls.autoRotateSpeed = 1.5;
+    controls.target.set(0, 1.2, 0);
+
+    scene.add(new THREE.HemisphereLight(0xffffff, 0x253044, 2.2));
+
+    const keyLight = new THREE.DirectionalLight(0xffe0a0, 4);
+    keyLight.position.set(5, 7, 5);
+    keyLight.castShadow = true;
+    scene.add(keyLight);
+
+    const rimLight = new THREE.DirectionalLight(0x77aaff, 3);
+    rimLight.position.set(-5, 3, -5);
+    scene.add(rimLight);
+
+    const floor = new THREE.Mesh(
+      new THREE.CircleGeometry(7, 64),
+      new THREE.MeshStandardMaterial({ color: 0x151b26, roughness: 0.8, metalness: 0.15 })
+    );
+    floor.rotation.x = -Math.PI / 2;
+    floor.receiveShadow = true;
+    scene.add(floor);
+
+    const grid = new THREE.GridHelper(14, 28, 0x354255, 0x202938);
+    grid.position.y = 0.01;
+    scene.add(grid);
+
+    let currentModel = null;
+    const loader = new GLTFLoader();
+
+    function clearModel() {
+      if (!currentModel) return;
+      scene.remove(currentModel);
+      currentModel.traverse(obj => {
+        if (obj.geometry) obj.geometry.dispose();
+        if (obj.material) {
+          const materials = Array.isArray(obj.material) ? obj.material : [obj.material];
+          materials.forEach(m => m.dispose?.());
+        }
+      });
+      currentModel = null;
+    }
+
+    function frameModel(model) {
+      const box = new THREE.Box3().setFromObject(model);
+      const center = box.getCenter(new THREE.Vector3());
+      const size = box.getSize(new THREE.Vector3());
+      const maxDim = Math.max(size.x, size.y, size.z) || 1;
+
+      model.position.sub(center);
+      model.position.y += size.y / 2;
+
+      controls.target.set(0, size.y * 0.45, 0);
+      const distance = maxDim * 2.4;
+      camera.position.set(distance * 0.65, size.y * 0.75 + 0.5, distance);
+      controls.update();
+    }
+
+    function addModel(gltf) {
+      clearModel();
+      currentModel = gltf.scene;
+      currentModel.traverse(obj => {
+        if (obj.isMesh) {
+          obj.castShadow = true;
+          obj.receiveShadow = true;
+        }
+      });
+      scene.add(currentModel);
+      frameModel(currentModel);
+      status.textContent = 'Model loaded successfully!';
+      status.style.color = '#7dff91';
+    }
+
+    function loadDefaultModel() {
+      status.textContent = 'Loading models/exploding_nuts_squirrel_character.glb...';
+      loader.load(
+        './models/exploding_nuts_squirrel_character.glb',
+        addModel,
+        undefined,
+        (error) => {
+          console.error(error);
+          status.textContent = 'Could not find the model. Make sure it is inside the models folder.';
+          status.style.color = '#ff8b8b';
+        }
+      );
+    }
+
+    loadDefaultModel();
+
+    document.getElementById('resetBtn').onclick = () => {
+      if (currentModel) frameModel(currentModel);
+    };
+
+    document.getElementById('rotateBtn').onclick = (e) => {
+      controls.autoRotate = !controls.autoRotate;
+      e.target.textContent = 'Auto Rotate: ' + (controls.autoRotate ? 'ON' : 'OFF');
+    };
+
+    const dropZone = document.getElementById('dropZone');
+
+    window.addEventListener('dragover', e => {
+      e.preventDefault();
+      dropZone.style.display = 'grid';
+    });
+
+    window.addEventListener('dragleave', e => {
+      if (e.relatedTarget === null) dropZone.style.display = 'none';
+    });
+
+    window.addEventListener('drop', e => {
+      e.preventDefault();
+      dropZone.style.display = 'none';
+      const file = e.dataTransfer.files[0];
+      if (!file || !/\.(glb|gltf)$/i.test(file.name)) return;
+
+      status.textContent = 'Loading dropped model...';
+      const url = URL.createObjectURL(file);
+      loader.load(url, (gltf) => {
+        addModel(gltf);
+        URL.revokeObjectURL(url);
+      }, undefined, (err) => {
+        console.error(err);
+        status.textContent = 'Failed to load dropped model.';
+        status.style.color = '#ff8b8b';
+      });
+    });
+
+    window.addEventListener('resize', () => {
+      camera.aspect = innerWidth / innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(innerWidth, innerHeight);
+    });
+
+    function animate() {
+      requestAnimationFrame(animate);
+      controls.update();
+      renderer.render(scene, camera);
+    }
+    animate();
+  </script>
+</body>
+</html>
