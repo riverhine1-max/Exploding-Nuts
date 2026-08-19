@@ -9,7 +9,8 @@ This browser-game prototype now includes:
 - Six reactive arenas: Oakwood Outpost, Frostbite Basin, Squirrel Scrapworks, Sunspire Canopy, Mooncap Grotto, and Tempest Treetops
 - Eight fighters with gameplay perks, including shield, ignite, critical-hit, and regeneration specialists
 - Seven weapons, including the new Twin Acorn Cannons dual-wield path
-- Forty-two upgrades, with four random choices after each completed wave; the new pool includes chaining lightning, boss damage, survival saves, dash tech, combo scaling, and more
+- Forty-two upgrades, with four random choices after each 45-second survival wave; cards are selected first and applied only after a separate confirmation press
+- Real-time survival rounds with a prominent top-center countdown, escalating enemy pressure, boss intervals, and automatic end-of-wave salvage collection
 - A new original dual-cannon key-art image on the home screen, plus distinct visual set dressing for the new arenas
 - Ten home-screen effects: cinematic staged reveal, subtle depth parallax, layered atmospheric lighting, drifting woodland mist, falling leaves, distant sky flashes, energized title sheen, button impact ripples, a scanning loadout card, and an explosive launch transition
 - Fully connected audio and settings: licensed CC0 menu and battle music, event sound effects, master/music/effects volume, motion, graphics quality, render scale, color filters, sensitivity, camera shake, fullscreen, and remappable controls
