@@ -11,6 +11,7 @@ This browser-game prototype now includes:
 - Seven weapons, including the new Twin Acorn Cannons dual-wield path
 - Forty-two upgrades, with four random choices after each completed wave; the new pool includes chaining lightning, boss damage, survival saves, dash tech, combo scaling, and more
 - A new original dual-cannon key-art image on the home screen, plus distinct visual set dressing for the new arenas
+- Ten home-screen effects: cinematic staged reveal, pointer parallax, reactive cursor lighting, drifting atmospheric mist, falling leaves, distant sky flashes, energized title sheen, button impact ripples, a scanning loadout card, and an explosive launch transition
 - A cinematic graphics pass with ACES tone mapping, physically based lights, 2048px soft shadows, atmospheric fog, glass HUD panels, a panoramic aurora sky, high-detail textured terrain, ambient motes, projectile glow, muzzle flash, explosion shockwaves, smoke, scorch marks, and enemy health markers
 - Browser-local tracking for best wave, acorns banked, and completed runs
 
