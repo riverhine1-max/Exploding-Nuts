@@ -5,6 +5,7 @@
 This browser-game prototype now includes:
 
 - A polished home screen with a guided three-stage drop setup: choose one fighter, one arena, then difficulty before launching
+- The Drop Forge now adds cinematic art-driven themes, three-tab fighter and arena dossiers, tactical recommendations, deep stat scans, equipped-versus-preview comparison, unlocked-choice roulette, touch swiping, keyboard shortcuts, animated transitions, acquisition progress, predicted fighter-map synergy, and a live deployment manifest
 - The supplied GLB remains available in ModelPreview.html; the playable arena now uses a polished transparent fighter hologram on a lit pedestal
 - Six reactive arenas: Oakwood Outpost, Frostbite Basin, Squirrel Scrapworks, Sunspire Canopy, Mooncap Grotto, and Tempest Treetops
 - Eight fighters with gameplay perks, including shield, ignite, critical-hit, and regeneration specialists
