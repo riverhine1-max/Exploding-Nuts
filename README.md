@@ -16,6 +16,7 @@ This browser-game prototype now includes:
 - Eight rebuilt articulated enemy models with detailed faces, armor, tails, wings, equipment, spawn telegraphs, walking cycles, wing flaps, body movement, and rotating mechanical parts
 - A new original dual-cannon key-art image on the home screen, plus distinct visual set dressing for the new arenas
 - Ten home-screen effects: cinematic staged reveal, subtle depth parallax, layered atmospheric lighting, drifting woodland mist, falling leaves, distant sky flashes, energized title sheen, button impact ripples, a scanning loadout card, and an explosive launch transition
+- A redesigned home command deck with a larger cinematic title, expandable live wallet, quick-drop remix, rotating field intelligence, clearer utility controls, persistent field records, and a larger image-led deployment summary
 - Fully connected audio and settings: licensed CC0 menu and battle music, event sound effects, master/music/effects volume, motion, graphics quality, render scale, color filters, sensitivity, camera shake, fullscreen, and remappable controls
 - A dedicated 41-entry achievement catalog with 26 standard goals and 15 legendary challenges, live progress bars, persistent unlock tracking, and Steam-style bottom-right unlock notifications with a custom chime
 - A working progression screen with lifetime records, Burrow Rank, an acorn wallet, direct achievement navigation, and four multi-rank permanent Burrow Armory upgrades
