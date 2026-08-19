@@ -14,7 +14,8 @@ This browser-game prototype now includes:
 - A new original dual-cannon key-art image on the home screen, plus distinct visual set dressing for the new arenas
 - Ten home-screen effects: cinematic staged reveal, subtle depth parallax, layered atmospheric lighting, drifting woodland mist, falling leaves, distant sky flashes, energized title sheen, button impact ripples, a scanning loadout card, and an explosive launch transition
 - Fully connected audio and settings: licensed CC0 menu and battle music, event sound effects, master/music/effects volume, motion, graphics quality, render scale, color filters, sensitivity, camera shake, fullscreen, and remappable controls
-- A working progression screen with lifetime records, achievements, Burrow Rank, an acorn wallet, and four multi-rank permanent Burrow Armory upgrades
+- A dedicated 41-entry achievement catalog with 26 standard goals and 15 legendary challenges, live progress bars, persistent unlock tracking, and Steam-style bottom-right unlock notifications with a custom chime
+- A working progression screen with lifetime records, Burrow Rank, an acorn wallet, direct achievement navigation, and four multi-rank permanent Burrow Armory upgrades
 - Acorns are now physical battlefield pickups that must be collected, bank at the end of a run, and can be spent on permanent health, salvage, damage, and shield bonuses
 - Detailed selectable fighter dossiers and arena intelligence, with eight distinct fighter mechanics, four difficulty modes, six map bonuses, strategy advice, stat profiles, relic explanations, and persistent selections
 - A cinematic graphics pass with ACES tone mapping, physically based lights, 2048px soft shadows, atmospheric fog, glass HUD panels, a panoramic aurora sky, high-detail textured terrain, ambient motes, projectile glow, muzzle flash, explosion shockwaves, smoke, scorch marks, and enemy health markers
