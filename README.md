@@ -21,6 +21,8 @@ This browser-game prototype now includes:
 - Acorns are now physical battlefield pickups that must be collected, bank at the end of a run, and can be spent on permanent health, salvage, damage, and shield bonuses
 - Detailed one-at-a-time fighter dossiers and arena intelligence, with arrow navigation, eight distinct fighter mechanics, four difficulty modes, six map bonuses, strategy advice, stat profiles, relic explanations, and persistent selections
 - Rookie and Oakwood Outpost are available from the start; every other fighter and arena is a permanent unlock purchased with banked acorns through a separate unlock-and-confirm flow
+- A device-local admin console beside fullscreen unlocks the complete catalog and provides achievement, armory, wallet, God Mode, one-hit, infinite Overdrive, healing, swarm, and wave-testing controls
+- Escape now pauses and freezes active gameplay, with resume, admin, fullscreen, and return-home controls available from the pause screen
 - A cinematic graphics pass with ACES tone mapping, physically based lights, 2048px soft shadows, atmospheric fog, glass HUD panels, a panoramic aurora sky, high-detail textured terrain, ambient motes, projectile glow, muzzle flash, explosion shockwaves, smoke, scorch marks, and enemy health markers
 - Browser-local tracking for best wave, acorns banked, and completed runs
 
