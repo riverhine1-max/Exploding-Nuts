@@ -11,6 +11,8 @@ This browser-game prototype now includes:
 - Seven weapons, including the new Twin Acorn Cannons dual-wield path
 - Forty-two upgrades, with four random choices after each 45-second survival wave; cards are selected first and applied only after a separate confirmation press
 - Real-time survival rounds with a prominent top-center countdown, escalating enemy pressure, boss intervals, and automatic end-of-wave salvage collection
+- Rebalanced enemy pressure: Wave 1 begins with a five-enemy cap, reinforcements arrive at readable intervals, kills create a short breathing window, and threat caps ramp gradually during each wave
+- Eight rebuilt articulated enemy models with detailed faces, armor, tails, wings, equipment, spawn telegraphs, walking cycles, wing flaps, body movement, and rotating mechanical parts
 - A new original dual-cannon key-art image on the home screen, plus distinct visual set dressing for the new arenas
 - Ten home-screen effects: cinematic staged reveal, subtle depth parallax, layered atmospheric lighting, drifting woodland mist, falling leaves, distant sky flashes, energized title sheen, button impact ripples, a scanning loadout card, and an explosive launch transition
 - Fully connected audio and settings: licensed CC0 menu and battle music, event sound effects, master/music/effects volume, motion, graphics quality, render scale, color filters, sensitivity, camera shake, fullscreen, and remappable controls
