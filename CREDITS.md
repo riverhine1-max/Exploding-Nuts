@@ -7,17 +7,17 @@
 
 ## Music
 
-Every music track in the game is released under [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/). Attribution is not legally required, but the creators and sources are documented here out of respect.
+The home theme is released under CC0. Each arena uses a different reuse-cleared vocal song, lyric track, or chant. The exact Creative Commons license for every local file is listed below; attribution is included both here and inside the game's Credits screen.
 
-| Location | Track | Creator | Local file | Source |
-| --- | --- | --- | --- | --- |
-| Home screen | “Dark Forest Theme” | The Cynic Project / cynicmusic | `Audio/HomeTheme.mp3` | [OpenGameArt](https://opengameart.org/content/dark-forest-theme) |
-| Oakwood Outpost | “JRPG Epic Rock Battle Theme #1” | HydroGene | `Audio/BattleTheme.mp3` | [OpenGameArt](https://opengameart.org/content/jrpg-epic-rock-battle-theme-1) |
-| Frostbite Basin | “8 bit lofi — Ice Cave” | TAD | `Audio/FrostbiteTheme.mp3` | [OpenGameArt](https://opengameart.org/content/8-bit-lofi-ice-cave) |
-| Squirrel Scrapworks | “Noisy Battle” | Some Weirdo | `Audio/ScrapworksTheme.ogg` | [OpenGameArt](https://opengameart.org/content/noisy-battle) |
-| Sunspire Canopy | “Prepare to Fight” | Basil | `Audio/SunspireTheme.mp3` | [OpenGameArt](https://opengameart.org/content/prepare-to-fight) |
-| Mooncap Grotto | “Mysterious Cave Theme Loop” | beardalaxy | `Audio/MooncapTheme.ogg` | [OpenGameArt](https://opengameart.org/content/mysterious-cave-theme-loop) |
-| Tempest Treetops | “Eye of the Storm” | Joth | `Audio/TempestTheme.mp3` | [OpenGameArt](https://opengameart.org/content/eye-of-the-storm) |
+| Location | Track | Creator | Local file | License | Source |
+| --- | --- | --- | --- | --- | --- |
+| Home screen | “Dark Forest Theme” | The Cynic Project / cynicmusic | `Audio/HomeTheme.mp3` | CC0 1.0 | [OpenGameArt](https://opengameart.org/content/dark-forest-theme) |
+| Oakwood Outpost | “A Sailor's Chant” | Thimras | `Audio/OakwoodVocalTheme.ogg` | CC0 1.0 | [OpenGameArt](https://opengameart.org/content/a-sailors-chant) |
+| Frostbite Basin | “Found You (Game Version)” | AndyNope | `Audio/FrostbiteVocalTheme.mp3` | CC0 / CC-BY 3.0 | [OpenGameArt](https://opengameart.org/content/found-you-game-version-andynope) |
+| Squirrel Scrapworks | “Heartbreak [DEMO]” | nene; vocals and additional composition by Dantastic | `Audio/ScrapworksVocalTheme.mp3` | CC-BY 3.0 | [OpenGameArt](https://opengameart.org/content/heartbreak-demo) |
+| Sunspire Canopy | “Show It To Me” | Kim Lightyear ft. Sandy Ratsouk | `Audio/SunspireVocalTheme.mp3` | CC-BY-SA 4.0 | [OpenGameArt](https://opengameart.org/content/show-it-to-me) |
+| Mooncap Grotto | “Space Walk” | Arthur | `Audio/MooncapVocalTheme.ogg` | CC-BY-SA 3.0 | [OpenGameArt](https://opengameart.org/content/space-walk) |
+| Tempest Treetops | “Ode to Godzilla” | Alexandr Zhelanov | `Audio/TempestVocalTheme.mp3` | CC-BY 4.0 | [OpenGameArt](https://opengameart.org/content/ode-to-godzilla) |
 
 Weapon blasts, relic activations, pickups, damage feedback, interface cues, and achievement sounds are generated procedurally in the game with the Web Audio API.
 
@@ -36,4 +36,4 @@ Weapon blasts, relic activations, pickups, damage feedback, interface cues, and 
 
 ## License note
 
-The music files may be used, modified, and redistributed under CC0 1.0. The rest of the original game code, artwork, characters, names, and project-specific assets remain part of the Exploding Nuts project unless a file states otherwise.
+The music files retain the individual Creative Commons licenses shown in the table. Any redistribution or modification must preserve the required attribution and, for CC-BY-SA tracks, the applicable share-alike terms. The rest of the original game code, artwork, characters, names, and project-specific assets remain part of the Exploding Nuts project unless a file states otherwise.
