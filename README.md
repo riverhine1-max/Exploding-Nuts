@@ -7,27 +7,27 @@ This browser-game prototype now includes:
 - A polished home screen with a guided three-stage drop setup: choose one fighter, one arena, then difficulty before launching
 - The Drop Forge now adds cinematic art-driven themes, three-tab fighter and arena dossiers, tactical recommendations, deep stat scans, equipped-versus-preview comparison, unlocked-choice roulette, touch swiping, keyboard shortcuts, animated transitions, acquisition progress, predicted fighter-map synergy, and a live deployment manifest
 - The supplied GLB remains available in ModelPreview.html, while the playable maps use natural landmarks instead of a central display figure
-- Six rebuilt seamless-loop arenas, each with three circular routes, four reconnecting cross-routes, twelve themed landmarks, natural perimeter dressing, and roughly ten times the former playable footprint
-- Nine fighters with gameplay perks, including Crossfire: a lower-health, slower specialist who dual-wields every weapon and owns the exclusive Bullet Ballet ability
-- Six distinct weapon families; dual-wielding has been retired as a generic unlock and is now Crossfire's defining character trait
+- Six rebuilt seamless-loop arenas, each with three continuous rings, four curved reconnecting routes, twelve preview-matched landmarks, route-safe scenery placement, concealed natural boundaries, and roughly ten times the former playable footprint
+- Nine fighters with gameplay perks, including Twinshot: a lower-health, slower specialist who dual-wields every weapon and owns the exclusive Bullet Ballet ability
+- Six distinct weapon families; dual-wielding has been retired as a generic unlock and is now Twinshot's defining character trait
 - Eighty-one upgrades with four random choices after each 45-second survival wave, including 28 fighter-specific upgrades and stronger offense, defense, status, economy, mobility, and high-risk branches
 - Real-time survival rounds with a prominent top-center countdown, escalating enemy pressure, boss intervals, and automatic end-of-wave salvage collection
 - Rebalanced enemy pressure: Wave 1 starts below the cap, reinforcements arrive at readable intervals, kills create a difficulty-scaled breathing window, and threat caps ramp gradually during each wave
 - Seven real difficulty tiers from Scout through Canopy Legend, scaling durability, damage, movement, ranged accuracy, reinforcement pressure, aggression, projectile speed, elite frequency, and rewards
 - Enemy projectiles are fully ballistic after launch: difficulty controls initial aim error and shot speed, but shots never bend or auto-track the player
-- Eight rebuilt articulated enemy models with detailed faces, armor, tails, wings, equipment, 3D fur tufts with motion response, spawn telegraphs, walking cycles, wing flaps, body movement, and rotating mechanical parts
+- Eight rebuilt articulated enemy models with detailed faces, armor, tails, wings, equipment, quality-scaled layered fur with wind and movement response, spawn telegraphs, walking cycles, wing flaps, body movement, and rotating mechanical parts
 - A new original dual-cannon key-art image on the home screen, plus distinct visual set dressing for the new arenas
 - Ten home-screen effects: cinematic staged reveal, subtle depth parallax, layered atmospheric lighting, drifting woodland mist, falling leaves, distant sky flashes, energized title sheen, button impact ripples, a scanning loadout card, and an explosive launch transition
 - A redesigned home command deck with a larger cinematic title, expandable live wallet, quick-drop remix, rotating field intelligence, clearer utility controls, persistent field records, and a larger image-led deployment summary
 - Fully connected audio and settings: a distinct licensed CC0 soundtrack for every arena, credited music previews, event sound effects, master/music/effects volume, motion, graphics quality, render scale, color filters, sensitivity, camera shake, fullscreen, and remappable controls
-- A dedicated 41-entry achievement catalog with 26 standard goals and 15 legendary challenges, live progress bars, persistent unlock tracking, and Steam-style bottom-right unlock notifications with a custom chime
+- A dedicated 51-entry achievement catalog with collection milestones, legendary challenges, live progress bars, persistent unlock tracking, and Steam-style bottom-right unlock notifications with a custom chime
 - A working progression screen with lifetime records, Burrow Rank, an acorn wallet, direct achievement navigation, and four multi-rank permanent Burrow Armory upgrades
 - Acorns are now physical battlefield pickups that must be collected, bank at the end of a run, and can be spent on permanent health, salvage, damage, and shield bonuses
 - Detailed one-at-a-time fighter dossiers and arena intelligence, with arrow navigation, nine distinct fighter mechanics, seven difficulty modes, six map bonuses, strategy advice, stat profiles, relic explanations, and persistent selections
-- Rookie and Oakwood Outpost are available from the start; every other fighter and arena is a permanent unlock purchased with banked acorns through a separate unlock-and-confirm flow
+- Rookie and Oakwood Outpost are available from the start; every other fighter and arena is a permanent unlock purchased with a single safe acquire-and-select transaction that cannot charge twice
 - A device-local admin console beside fullscreen unlocks the complete catalog and provides achievement, armory, wallet, God Mode, one-hit, infinite Overdrive, healing, swarm, and wave-testing controls
 - Escape now pauses and freezes active gameplay, with resume, admin, fullscreen, and return-home controls available from the pause screen
-- A cinematic graphics pass with ACES tone mapping, physically based lights, 2048px soft shadows, atmospheric fog, glass HUD panels, a panoramic aurora sky, high-detail textured terrain, ambient motes, projectile glow, muzzle flash, explosion shockwaves, smoke, scorch marks, and enemy health markers
+- A cinematic graphics pass with ACES tone mapping, biome reflection environments, physically based lights and materials, weathered metal/brass weapon surfaces, 2048px soft shadows, atmospheric fog, panoramic skies, high-detail textured terrain, ambient particles, projectile glow, muzzle flash, explosion shockwaves, smoke, scorch marks, and enemy health markers
 - Browser-local tracking for best wave, acorns banked, and completed runs
 
 ## Play locally
