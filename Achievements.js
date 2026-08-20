@@ -1,6 +1,6 @@
 (function(){
 'use strict';
-const fighters=['rookie','blitz','boomer','frostbite','rivet','ember','volt','luna'];
+const fighters=['rookie','blitz','boomer','frostbite','rivet','ember','volt','luna','crossfire'];
 const arenas=['oak','frost','scrap','solar','spore','storm'];
 const sumRanks=m=>Object.values(m.armory||{}).reduce((sum,value)=>sum+(Number(value)||0),0);
 const countPlayed=value=>Object.values(value||{}).filter(runs=>runs>0).length;
@@ -24,7 +24,7 @@ const defs=[
  {id:'four_arenas',tier:'standard',icon:'🧭',name:'Branching Out',desc:'Complete runs in 4 different arenas.',target:4,value:m=>countPlayed(m.arenasPlayed)},
  {id:'all_arenas',tier:'standard',icon:'🗺️',name:'Canopy Tour',desc:'Complete a run in every arena.',target:6,value:m=>countPlayed(m.arenasPlayed)},
  {id:'four_fighters',tier:'standard',icon:'🐿️',name:'Roster Call',desc:'Complete runs with 4 different fighters.',target:4,value:m=>countPlayed(m.fightersPlayed)},
- {id:'all_fighters',tier:'standard',icon:'🎒',name:'Full Burrow',desc:'Complete a run with every fighter.',target:8,value:m=>countPlayed(m.fightersPlayed)},
+ {id:'all_fighters',tier:'standard',icon:'🎒',name:'Full Burrow',desc:'Complete a run with every fighter.',target:9,value:m=>countPlayed(m.fightersPlayed)},
  {id:'first_armory',tier:'standard',icon:'🔧',name:'Burrow Armorer',desc:'Purchase a permanent Armory rank.',target:1,value:m=>sumRanks(m)},
  {id:'five_armory',tier:'standard',icon:'⚙️',name:'Workshop Regular',desc:'Purchase 5 permanent Armory ranks.',target:5,value:m=>sumRanks(m)},
  {id:'pickup_hunter',tier:'standard',icon:'🧲',name:'Treasure Hunter',desc:'Collect 250 battlefield acorn pickups.',target:250,value:m=>m.pickupsCollected},
@@ -42,7 +42,7 @@ const defs=[
  {id:'mayhem_ten',tier:'legendary',icon:'🩸',name:'Mayhem Master',desc:'Reach Wave 10 on Mayhem difficulty.',target:10,value:m=>m.difficultyBest.mayhem||0},
  {id:'apocalypse_ten',tier:'legendary',icon:'🌋',name:'Nutpocalypse Now',desc:'Reach Wave 10 on Nutpocalypse difficulty.',target:10,value:m=>m.difficultyBest.apocalypse||0},
  {id:'max_armory',tier:'legendary',icon:'🛠️',name:'Master of the Workshop',desc:'Purchase every Burrow Armory rank.',target:9,value:m=>sumRanks(m)},
- {id:'fighter_loyalty',tier:'legendary',icon:'🎭',name:'Eight Lives, Three Times',desc:'Complete 3 runs with every fighter.',target:3,value:m=>minimumRuns(m.fightersPlayed,fighters)},
+ {id:'fighter_loyalty',tier:'legendary',icon:'🎭',name:'Nine Lives, Three Times',desc:'Complete 3 runs with every fighter.',target:3,value:m=>minimumRuns(m.fightersPlayed,fighters)},
  {id:'arena_mastery',tier:'legendary',icon:'🌐',name:'Home Field Everywhere',desc:'Complete 5 runs in every arena.',target:5,value:m=>minimumRuns(m.arenasPlayed,arenas)},
  {id:'acorn_tycoon',tier:'legendary',icon:'🏦',name:'Acorn Tycoon',desc:'Collect 10,000 lifetime acorns.',target:10000,value:m=>m.lifetimeAcorns},
  {id:'hour_survivor',tier:'legendary',icon:'⌛',name:'The Long Uprising',desc:'Survive for one total hour.',target:3600,value:m=>m.totalSurvivalSeconds,format:'time'},

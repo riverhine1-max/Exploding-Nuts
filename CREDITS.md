@@ -24,6 +24,7 @@ Weapon blasts, relic activations, pickups, damage feedback, interface cues, and 
 ## Artwork and characters
 
 - Original title-screen, fighter, arena, terrain, and interface imagery was created specifically for **Exploding Nuts: Acorn Uprising** under River's art direction with AI-assisted image production.
+- `Pictures/Fighter_Crossfire_v1.png` is the original selection portrait for the dedicated dual-wield fighter, generated specifically for this project with AI-assisted image production and then integrated under River's art direction.
 - The original squirrel character model, fighter hologram, character portraits, arena concepts, and woodland world-building assets were produced for this project.
 - Unicode emoji glyphs used by the interface are rendered by the player's operating-system fonts and may look different between platforms.
 
