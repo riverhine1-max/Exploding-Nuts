@@ -8,6 +8,7 @@ This browser-game prototype now includes:
 - The Drop Forge now adds cinematic art-driven themes, three-tab fighter and arena dossiers, tactical recommendations, deep stat scans, equipped-versus-preview comparison, unlocked-choice roulette, touch swiping, keyboard shortcuts, animated transitions, acquisition progress, predicted fighter-map synergy, and a live deployment manifest
 - The supplied GLB remains available in ModelPreview.html, while the playable maps use natural landmarks instead of a central display figure
 - Six rebuilt seamless-loop arenas, each with three continuous rings, four curved reconnecting routes, twelve preview-matched landmarks, route-safe scenery placement, concealed natural boundaries, and roughly ten times the former playable footprint
+- Every arena now has a unique, full-scale enterable landmark: Oakwatch Ranger Lodge, Aurora Ice Observatory, Foreman Salvage Workshop, Sunkeeper Canopy Chapel, Mooncap Research Hollow, and Thunderroot Relay Station. Their open doors and interiors are navigable while walls, roofs, and consoles block players, shots, and enemy navigation correctly
 - Nine fighters with gameplay perks, including Twinshot: a lower-health, slower specialist who dual-wields every weapon and owns the exclusive Bullet Ballet ability
 - Six distinct weapon families; dual-wielding has been retired as a generic unlock and is now Twinshot's defining character trait
 - Eighty-one upgrades with four random choices after each 45-second survival wave, including 28 fighter-specific upgrades and stronger offense, defense, status, economy, mobility, and high-risk branches
@@ -17,7 +18,7 @@ This browser-game prototype now includes:
 - Sequential difficulty progression: Scout and Uprising begin open, and surviving a wave unlocks the next tier in order
 - Ten distinct run modifiers with one-time acorn unlocks, unique icons, visible rule changes, and an admin progression bypass
 - Enemy projectiles are fully ballistic after launch: difficulty controls initial aim error and shot speed, but shots never bend or auto-track the player
-- Eight rebuilt articulated enemy models with detailed faces, armor, tails, wings, equipment, quality-scaled layered fur with wind and movement response, spawn telegraphs, walking cycles, wing flaps, body movement, and rotating mechanical parts
+- Eight rebuilt articulated enemy models with detailed faces, armor, tails, wings, equipment, quality-scaled instanced fur with wind and movement response, spawn telegraphs, walking cycles, wing flaps, body movement, and rotating mechanical parts
 - A new original dual-cannon key-art image on the home screen, plus distinct visual set dressing for the new arenas
 - Ten home-screen effects: cinematic staged reveal, subtle depth parallax, layered atmospheric lighting, drifting woodland mist, falling leaves, distant sky flashes, energized title sheen, button impact ripples, a scanning loadout card, and an explosive launch transition
 - A redesigned home command deck with a larger cinematic title, expandable live wallet, quick-drop remix, rotating field intelligence, clearer utility controls, persistent field records, and a larger image-led deployment summary
@@ -30,12 +31,12 @@ This browser-game prototype now includes:
 - Rookie and Oakwood Outpost are available from the start; every other fighter and arena is a permanent unlock purchased with a single safe acquire-and-select transaction that cannot charge twice
 - A device-local admin console beside fullscreen unlocks the complete catalog and provides achievement, armory, wallet, God Mode, one-hit, infinite Overdrive, healing, swarm, and wave-testing controls
 - Escape now pauses and freezes active gameplay, with resume, admin, fullscreen, and return-home controls available from the pause screen
-- A cinematic graphics pass with ACES tone mapping, biome reflection environments, physically based lights and materials, weathered metal/brass weapon surfaces, 2048px soft shadows, atmospheric fog, panoramic skies, high-detail textured terrain, ambient particles, projectile glow, muzzle flash, explosion shockwaves, smoke, scorch marks, and enemy health markers
+- A third-generation cinematic realism pass with ACES tone mapping, biome reflection environments, physically varied roughness and micro-relief maps, detailed wood/steel/brass/acorn surfaces, first-person paws, expanded weapon geometry, 2048px soft shadows, atmospheric fog, map-specific cinematic grading, panoramic skies, animated foliage, wet and icy ground patches, mist fields, distant silhouettes, projectile glow, muzzle flash, explosion shockwaves, smoke, scorch marks, and enemy health markers
 - Browser-local tracking for best wave, acorns banked, and completed runs
 
 ## Play locally
 
-Open index.html through a small local web server rather than double-clicking the file. The game loads Three.js and the GLB model from web URLs, so the first run needs an internet connection.
+Open index.html through a small local web server rather than double-clicking the file. The playable game keeps its required Three.js runtime inside the repository, so normal gameplay no longer depends on a CDN connection.
 
 Controls: **WASD** move, **mouse** aim, **left-click** fire, **Space** jump, **Shift** dash, **Q / 1–7** change weapons, **E** Overdrive, **F** arena relic, **R** fighter ability, **Esc** pause, **F11** fullscreen.
 
